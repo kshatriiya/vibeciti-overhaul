@@ -1,0 +1,390 @@
+body, html {
+
+margin: 0;
+padding: 0;
+background: #FFFFFF;
+font-family: AftaSeri;
+
+}
+
+#main-container {
+
+width: 100%;
+min-width: 100vw;
+height: 100%;
+
+
+}
+
+#mainscreen {
+
+width: 100vw;
+height: 100vh;
+margin: 0px auto;
+
+
+}
+
+#navbar-container {
+
+position: relative;
+width: 100vw;
+/*height: 68.53px;*/
+height: 53px;
+}
+
+#navbar {
+
+width: 100vw;
+position: fixed;
+display: flex;
+flex-direction: row;
+text-align: center;
+align-content: center;
+align-items: center;
+justify-content: space-between;
+/*background-color: rgba(106, 111, 120, 0.3);*/
+color: white;
+opacity: 0.8;
+z-index: 1;
+transition: all 0.5s linear;
+text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+				 0px 8px 11px rgba(0,0,0,0.1),	
+				 0px 16px 12px rgba(0,0,0,0.1);	
+
+
+}
+
+#navbar #logo {
+
+padding: 0px 20px 0px 100px;
+
+}
+
+span {
+
+font-size: 30px;
+
+}
+
+#navlinks ul {
+
+display: flex;
+flex-direction: row;
+text-align: center;
+align-items: center;
+align-content: center;
+margin: 0px auto;
+padding: 0px;
+margin-right: 100px;
+text-transform: uppercase;
+font-size: 0.8em;
+}
+
+#bootstrapButton {
+
+background: #112D34;
+border-style: none;
+width: 125px;	
+} 
+
+
+#navlinks ul li {
+
+list-style: none;
+margin: 10px 20px 10px 20px;
+
+}
+
+
+#navlinks ul li button {
+
+text-transform: uppercase;
+
+}
+
+#play-area {
+
+position: relative;
+width: 100vw;
+height: 100vh;
+margin: 0 auto;
+background-image: url("anime_hatsune.jpg");
+background-size: cover;
+background-position: center;
+filter: grayscale(1);
+transition: filter 2s linear;
+
+
+}
+
+/*#play-area-filter {
+
+position: relative;
+width: 100vw;
+height: 100vh;
+margin: 0 auto;
+background-color: rgba(106, 111, 120, 0.1);
+
+}*/
+
+#play-area-overlay {
+
+position: absolute;
+top: 0;
+right: 0;
+bottom: 0;
+left: 0;
+display: flex;
+flex-direction: row;
+align-items: center;
+align-content: center;
+text-align: center;
+height: 100%;
+margin: 0px;
+width: 100%;
+
+
+}
+
+#textbox {
+
+height: 100%;
+flex: 2;
+margin: 0px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+color: #6A6F78;
+
+}
+
+#textbox h1 {
+
+font-size: 3em;
+/*text-transform: uppercase;*/
+color: white;
+font-family: AftaSeri;
+text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+				 0px 8px 11px rgba(0,0,0,0.1),	
+				 0px 16px 12px rgba(0,0,0,0.1);	
+
+}
+
+#visualizer {
+position: relative;
+transform: translateX(-150px);
+height: 100%;
+flex: 1;
+display: flex;
+justify-content: center;
+align-content: center;
+align-items: center;
+text-align: center;
+animation-fill-mode: forwards;
+opacity: 0.8;
+}
+
+/*
+#visualizer:hover {
+
+height: 100%;
+flex: 1;
+margin: 0px;
+display: flex;
+justify-content: center;
+align-content: center;
+align-items: center;
+text-align: center;
+animation-name: dissolve;
+animation-duration: 2s;
+animation-fill-mode: forwards;
+animation-timing-function: linear;
+
+}
+*/
+
+#ring-outer {
+
+position: relative;
+width: 160px;
+height: 160px;
+border: 15px solid black;
+border-radius: 50%;
+display: flex;
+justify-content: center;
+align-content: center;
+align-items: center;
+text-align: center;
+margin: 0;
+padding: 0;
+
+}
+
+#ring-inner3 {
+
+width: 130px;
+height: 130px;
+border: 15px solid orange;
+border-radius: 50%;
+display: flex;
+justify-content: center;
+align-content: center;
+align-items: center;
+text-align: center;
+margin: 0;
+padding: 0;
+
+}
+
+.fa {
+
+position: relative;
+color: black;
+transform: scale(4, 4) translateX(23px);
+
+z-index: 100;
+
+
+}
+
+#ring-inner2 {
+
+width: 30px;
+height: 140px;
+display: flex;
+justify-content: center;
+align-content: center;
+align-items: center;
+text-align: center;
+margin: 0;
+padding: 0;
+background: white;
+animation-name: rotateDivs;
+animation-duration: 10s;
+animation-iteration-count: infinite;
+animation-timing-function: linear;
+
+}
+
+
+#ring-inner {
+
+width: 30px;
+height: 140px;
+background: white;
+margin: 0;
+padding: 0;
+transform-origin: 50% 50%;
+transform: rotate(90deg);
+
+
+}
+
+#playlist-container{
+
+width: 100vw;
+height: 100px;
+/*border-top: 2px solid red;
+border-radius: 10%;*/
+
+
+}
+
+
+#track-list {
+
+width: 100%;
+min-width: 100vw;
+height: 600px;
+text-align: center;
+
+
+}
+
+#track-container {
+
+margin: 40px auto;
+width: 80%;
+min-width: 80vw;
+height: auto;
+display: flex;
+align-content: center;
+justify-content: center;
+text-align: center;
+flex-direction: row;
+flex-wrap: wrap;
+
+}
+
+
+.track-box {
+
+width: 30%;
+height: 300px;
+overflow: hidden;
+-webkit-box-shadow: 0px 1px 1px 0px rgba(130,130,130,1);
+-moz-box-shadow: 0px 1px 1px 0px rgba(130,130,130,1);
+box-shadow: 0px 1px 1px 0px rgba(130,130,130,1);
+margin: 20px 1% 0px 1%;
+transition: transform 0.5s;
+border-radius: 5px;
+
+
+}
+
+
+.track-box:hover {
+
+
+-webkit-box-shadow: 0px 2px 2px 0px rgba(130,130,130,1);
+-moz-box-shadow: 0px 2px 2px 0px rgba(130,130,130,1);
+box-shadow: 0px 2px 2px 0px rgba(130,130,130,1);
+margin: 20px 1% 0px 1%;
+position: relative;
+transform: translateY(-10px);
+
+
+
+}
+
+.track-box img {
+
+border-radius: 5px;
+margin: 0.5%;
+max-width: 99%;
+
+}
+
+@keyframes rotateDivs {
+
+0% {transform: rotate(0deg);}
+
+100% {transform: rotate(360deg);}
+
+}
+
+@keyframes dissolve {
+
+0% {transform: scale(1.5, 1.5);}
+10% {transform: scale(2.0, 2.0);}
+25% {transform: scale(1.5, 1.5);}
+40% {transform: scale(1.0, 1.0);}
+50% {transform: scale(0.5, 0.5);}
+60% {transform: scale(0.2, 0.2); opacity: 0.6;}
+75% {transform: scale(0.1, 0.1); opacity: 0.3;}
+100% {opacity: 0;}
+
+
+}
+
+@font-face {
+    font-family: AftaSeri;
+    src: url(fonts/AftaSerifThin-Regular.otf);
+}
+
+#track-list h3 {
+
+font-family: AftaSeri;
+
+}

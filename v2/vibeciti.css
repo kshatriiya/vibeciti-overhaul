@@ -1,0 +1,458 @@
+body, html {
+
+margin: 0;
+padding: 0;
+background: #FFFFFF;
+font-family: AftaSeri;
+
+
+}
+
+#main-container {
+
+width: 100%;
+min-width: 100vw;
+height: 100%;
+
+
+}
+
+#mainscreen {
+
+width: 100vw;
+height: 100vh;
+margin: 0px auto;
+
+
+}
+
+button {
+width: 150px;
+height: 50px;
+
+}
+
+#navbar-container {
+
+position: relative;
+width: 100vw;
+/*height: 68.53px;*/
+height: 53px;
+}
+
+#navbar {
+
+width: 100vw;
+position: fixed;
+display: flex;
+flex-direction: row;
+text-align: center;
+align-content: center;
+align-items: center;
+justify-content: space-between;
+/*background-color: rgba(106, 111, 120, 0.3);*/
+color: white;
+opacity: 0.8;
+z-index: 1;
+transition: all 0.5s linear;
+text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+				 0px 8px 11px rgba(0,0,0,0.1),	
+				 0px 16px 12px rgba(0,0,0,0.1);	
+
+
+}
+
+#navbar #logo {
+
+padding: 0px 20px 0px 100px;
+
+}
+
+span {
+
+font-size: 30px;
+
+}
+
+#navlinks ul {
+
+display: flex;
+flex-direction: row;
+text-align: center;
+align-items: center;
+align-content: center;
+margin: 0px auto;
+padding: 0px;
+margin-right: 100px;
+
+font-size: 0.8em;
+}
+
+#bootstrapButton {
+
+background: #112D34;
+border-style: none;
+width: 125px;	
+} 
+
+
+#navlinks ul li {
+
+list-style: none;
+margin: 10px 20px 10px 20px;
+
+}
+
+
+#navlinks ul li button {
+
+/*text-transform: uppercase;*/
+font-family: AftaSeri;
+background: grey;
+color: white;
+font-weight: bold;
+
+}
+
+#play-area {
+
+position: relative;
+width: 100vw;
+height: 100vh;
+margin: 0 auto;
+display: flex;
+flex-direction: row;
+
+}
+
+
+#play-area-overlay {
+
+position: absolute;
+top: 0;
+right: 0;
+bottom: 0;
+left: 0;
+display: flex;
+flex-direction: row;
+align-items: center;
+align-content: center;
+text-align: center;
+height: 100%;
+margin: 0px;
+width: 100%;
+
+
+}
+
+
+.jukebox {
+
+height: 100%;
+width: 20%;
+
+background-size: cover;
+background-position: center;
+
+filter: grayscale(1);
+transition: width 0.5s ease, filter 2s ease;
+
+}
+
+.jukebox:hover {
+
+width: 50%;
+filter: grayscale(0);
+
+}
+
+#jukebox-one {
+
+overflow: hidden;
+background-image: url("yukinoshita_yukino_girl_scarf_art_103415_1920x1080.jpg")
+
+
+}
+
+#jukebox-two {
+
+overflow: hidden;
+background-image: url("bleachcropped.jpg")
+
+
+}
+
+#jukebox-three {
+
+overflow: hidden;
+background-image: url("hatsunecropped.jpg");
+
+}
+
+#jukebox-four {
+
+overflow: hidden;
+background-image: url("mikucropped.jpg")
+
+
+}
+
+#jukebox-five {
+
+overflow: hidden;
+background-image: url("neko_yanshoujie_cropped.jpg")
+
+
+}
+
+.juke-overlay {
+
+height: 40%;
+width: 100%;
+
+
+}
+
+.juke-filter {
+
+height: 100%;
+width: 100%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-content: center;
+/*background: rgba(0, 0, 0, 0.2);*/
+opacity: 0;
+
+}
+
+.juke-filter:hover {
+
+opacity: 1;
+
+}
+
+#textbox {
+
+height: 100%;
+flex: 2;
+margin: 0px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+color: #6A6F78;
+
+}
+
+#textbox h1 {
+
+font-size: 3em;
+/*text-transform: uppercase;*/
+color: white;
+font-family: AftaSeri;
+text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+				 0px 8px 11px rgba(0,0,0,0.1),	
+				 0px 16px 12px rgba(0,0,0,0.1);	
+
+}
+
+
+
+#playlist-container{
+
+width: 100vw;
+height: 300px;
+display: flex;
+flex-direction: row;
+align-content: center;
+align-items: center;
+justify-content: center;
+
+
+}
+
+#mp3_player, #audiobox  {
+
+
+height: 100%;
+width: 60%;
+display: flex;
+flex-direction: row;
+align-content: center;
+align-items: center;
+justify-content: center;
+
+}
+
+
+
+#analyser {
+
+/*position: absolute;
+top: 100px;
+left: 400px;*/
+height: 400px;
+width: 400px;
+background-color: rgba(0, 0, 0, 0.3);
+
+}
+
+
+#track-list {
+
+width: 100%;
+min-width: 100vw;
+
+text-align: center;
+
+
+}
+
+#track-list h4 {
+
+padding-top: 30px;
+margin: 0px;
+color: gray;
+
+}
+
+#track-list h3 {
+
+margin-top: 10px;
+margin-bottom: 40px;
+font-weight: bold;
+}
+
+.track-row {
+
+width: 100vw;
+min-width: 100%;
+height: 300px;
+
+
+}
+
+#track-row-two {
+
+background: url("hatsubackgroundtwo.png");
+overflow:hidden;
+
+}
+
+#pngTwo {
+
+transform: translateX(-300px);
+display: block;
+transition: transform 1s ease;
+
+}
+
+
+
+#track-row-one {
+
+background: url("tuhourow.jpg")
+
+}
+
+#track-row-three {
+
+background: url("fruitrow.jpg")
+
+}
+
+#track-container {
+
+margin: 40px auto;
+width: 80%;
+min-width: 80vw;
+height: auto;
+display: flex;
+align-content: center;
+justify-content: center;
+text-align: center;
+flex-direction: row;
+flex-wrap: wrap;
+
+}
+
+
+.track-box {
+
+width: 30%;
+
+overflow: hidden;
+-webkit-box-shadow: 0px 1px 1px 0px rgba(130,130,130,1);
+-moz-box-shadow: 0px 1px 1px 0px rgba(130,130,130,1);
+box-shadow: 0px 1px 1px 0px rgba(130,130,130,1);
+
+transition: transform 2s ease;
+border-radius: 5px;
+
+
+}
+
+
+.track-box:hover {
+
+
+-webkit-box-shadow: 0px 2px 2px 0px rgba(130,130,130,1);
+-moz-box-shadow: 0px 2px 2px 0px rgba(130,130,130,1);
+box-shadow: 0px 2px 2px 0px rgba(130,130,130,1);
+
+position: relative;
+transform: translateY(-10px) scale(1.2, 1.2);
+
+
+
+
+}
+
+.track-box img {
+
+border-radius: 5px;
+
+max-width: 100%;
+
+}
+
+#placeholder {
+
+width: 100vw;
+height: 1000px;
+
+}
+
+@keyframes rotateDivs {
+
+0% {transform: rotate(0deg);}
+
+100% {transform: rotate(360deg);}
+
+}
+
+@keyframes dissolve {
+
+0% {transform: scale(1.5, 1.5);}
+10% {transform: scale(2.0, 2.0);}
+25% {transform: scale(1.5, 1.5);}
+40% {transform: scale(1.0, 1.0);}
+50% {transform: scale(0.5, 0.5);}
+60% {transform: scale(0.2, 0.2); opacity: 0.6;}
+75% {transform: scale(0.1, 0.1); opacity: 0.3;}
+100% {opacity: 0;}
+
+
+}
+
+@font-face {
+    font-family: AftaSeri;
+    src: url(fonts/AftaSerifThin-Regular.otf);
+}
+
+#track-list h3 {
+
+font-family: AftaSeri;
+
+}
+

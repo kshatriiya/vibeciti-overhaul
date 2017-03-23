@@ -1,0 +1,762 @@
+body, html {
+
+margin: 0;
+padding: 0;
+background: #FFFFFF;
+font-family: AftaSeri;
+
+
+}
+
+div {
+
+display: block;
+
+}
+
+#main-container {
+
+width: 84%;
+height: 100%;
+margin: 0px auto;
+
+}
+
+#left-column {
+
+width: 8%;
+position: fixed;
+background: url("side-bg.jpg");
+height: 100%;
+margin: 0px auto;
+z-index: 1000;
+top: 0;
+bottom: 0;
+left: 0;
+
+}
+
+#playlist-text {
+
+position: absolute;
+left: 50%;
+top: 50%;
+width: 350px;
+transform: translateX(-50%) translateY(-50%) rotate(90deg);
+
+} 
+
+#playlist-text p {
+
+color: white;
+font-size: 12px;
+line-height: 16px;
+word-spacing: 20px;
+
+}
+
+#right-column {
+
+width: 8%;
+position: fixed;
+background: url("side-bg.jpg");
+height: 100%;
+margin: 0px auto;
+z-index: 1000;
+top: 0;
+bottom: 0;
+right: 0;
+
+}
+
+#right-column #Countdown {
+
+display: flex;
+flex-direction: column;
+align-content: center;
+align-items: center;
+justify-content: center;
+margin-top: 100px;
+
+}
+
+#right-column #Countdown p {
+
+color: white;
+font-size: 12px;
+line-height: 16px;
+margin: 30px;
+
+}
+
+#right-column #Countdown p:nth-of-type(even) {
+
+
+font-size: 30px;
+
+}
+
+#mainscreen {
+
+width: 100%;
+height: 80vh;
+margin: 0px auto;
+
+
+}
+
+button {
+width: 150px;
+height: 50px;
+
+}
+
+
+
+#navbar {
+
+width: 84%;
+position: fixed;
+display: flex;
+flex-direction: row;
+text-align: center;
+align-content: center;
+align-items: center;
+justify-content: flex-end;
+/*background-color: rgba(106, 111, 120, 0.8);*/
+color: white;
+opacity: 0.8;
+z-index: 1;
+transition: all 0.5s linear;
+text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+				 0px 8px 11px rgba(0,0,0,0.1),	
+				 0px 16px 12px rgba(0,0,0,0.1);	
+
+
+}
+
+#navbar #logo {
+
+padding: 0px 20px 0px 100px;
+margin-right: 50px;
+
+}
+
+span {
+
+font-size: 50px;
+
+}
+
+#bootstrapButton {
+
+background: #112D34;
+border-style: none;
+width: 125px;	
+} 
+
+
+
+#play-area {
+
+position: relative;
+width: 100%;
+height: 100%;
+margin: 0 auto;
+display: flex;
+flex-direction: row;
+
+}
+
+
+#play-area-overlay {
+
+position: absolute;
+top: 0;
+right: 0;
+bottom: 0;
+left: 0;
+display: flex;
+flex-direction: row;
+align-items: center;
+align-content: center;
+text-align: center;
+height: 100%;
+margin: 0px;
+width: 100%;
+
+
+}
+
+
+.jukebox {
+
+height: 100%;
+width: 20%;
+
+background-size: cover;
+background-position: center;
+
+filter: grayscale(1);
+transition: width 0.5s ease, filter 2s ease;
+
+}
+
+.jukebox:after {
+
+height: 100%;
+width: 20%;
+content: "";
+background-image: url("overlay.png");
+
+
+}
+
+.jukebox:hover {
+
+width: 50%;
+filter: grayscale(0);
+
+}
+
+#jukebox-one {
+
+overflow: hidden;
+background-image: url("yukinoshita_yukino_girl_scarf_art_103415_1920x1080.jpg")
+
+
+}
+
+#jukebox-two {
+
+overflow: hidden;
+background-image: url("bleachcropped.jpg")
+
+
+}
+
+#jukebox-three {
+
+overflow: hidden;
+background-image: url("hatsunecropped.jpg");
+
+}
+
+#jukebox-four {
+
+overflow: hidden;
+background-image: url("mikucropped.jpg")
+
+
+}
+
+#jukebox-five {
+
+overflow: hidden;
+background-image: url("neko_yanshoujie_cropped.jpg")
+
+
+}
+
+.juke-overlay {
+
+height: 40%;
+width: 100%;
+
+
+}
+
+.juke-filter {
+
+height: 100%;
+width: 100%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-content: center;
+/*background: rgba(0, 0, 0, 0.2);*/
+opacity: 0;
+
+}
+
+.juke-filter:hover {
+
+opacity: 1;
+
+}
+
+#textbox {
+
+height: 100%;
+flex: 2;
+margin: 0px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+color: #6A6F78;
+
+}
+
+#textbox h1 {
+
+font-size: 3em;
+/*text-transform: uppercase;*/
+color: white;
+font-family: AftaSeri;
+text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+				 0px 8px 11px rgba(0,0,0,0.1),	
+				 0px 16px 12px rgba(0,0,0,0.1);	
+
+}
+
+
+
+#playlist-container{
+
+width: 100%;
+height: 500px;
+display: flex;
+flex-direction: row;
+align-content: center;
+align-items: center;
+margin-bottom: 60px; /*placeholder*/
+
+
+}
+
+#chat-window {
+
+width: 25%;
+height: 500px;
+box-sizing: border-box;
+background: gray;
+opacity: 0.5;
+}
+
+#about-column {
+
+position: relative;
+width: 75%;
+height: 500px;
+box-sizing: border-box;
+display: flex;
+flex-direction: column;
+align-content: center;
+align-items: center;
+
+
+
+}
+
+#about-column:after {
+
+position: absolute;
+top: 0;
+left: 0;
+content: "";
+width: 100%;
+height: 100%;
+opacity: 0.5;
+background: url("animeresize4.jpg");
+background-size: cover;
+background-position: center;
+overflow: hidden;
+
+}
+
+#sub-title {
+  width: 70%;
+  height: 250px;
+  text-align: left;
+  font-weight: bold;
+  padding-top: 120px;
+  
+}
+
+#sub-title h4 {
+  color: rgba(110, 2, 2, 1);
+}
+
+#text-body {
+  width: 100%;
+  height: 250px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: flex-end;
+
+}
+
+#text-body > div {
+  width: 42.5%;
+  height: 250px;
+  text-align: left;  
+  padding-top: 50px;
+}
+
+.frame-container {
+
+width: 100%;
+height: 1750px;
+display: flex;
+flex-direction: column;
+
+
+}
+
+.frame-container > div {
+
+width: 100%;
+height: 400px;
+margin-bottom: 30px;
+display: flex;
+flex-direction: row;
+
+
+}
+
+#mp3_player, #audiobox  {
+
+
+height: 100%;
+width: 60%;
+display: flex;
+flex-direction: row;
+align-content: center;
+align-items: center;
+justify-content: center;
+
+}
+
+
+
+#analyser {
+
+/*position: absolute;
+top: 100px;
+left: 400px;*/
+height: 400px;
+width: 400px;
+background-color: rgba(0, 0, 0, 0.3);
+
+}
+
+
+#track-list {
+
+width: 100%;
+margin: 0px auto;
+
+text-align: center;
+
+
+}
+
+#track-list h4 {
+
+padding-top: 30px;
+margin: 0px;
+color: gray;
+
+}
+
+#track-list h3 {
+
+margin-top: 10px;
+margin-bottom: 40px;
+font-weight: bold;
+}
+
+.track-row {
+
+width: 100%;
+height: 300px;
+
+
+}
+
+.track-row img {
+
+width: 120%;
+
+}
+
+#track-row-two {
+
+background: url("hatsubackgroundtwo.png");
+overflow:hidden;
+
+}
+
+#pngTwo {
+
+transform: translateX(-300px);
+display: block;
+transition: transform 1s ease;
+
+}
+
+
+
+#track-row-one {
+
+background: url("tuhourow.jpg")
+
+}
+
+#track-row-three {
+
+background: url("fruitrow.jpg")
+
+}
+
+#track-container {
+
+margin: 40px auto;
+width: 80%;
+min-width: 80vw;
+height: auto;
+display: flex;
+align-content: center;
+justify-content: center;
+text-align: center;
+flex-direction: row;
+flex-wrap: wrap;
+
+}
+
+
+.track-box {
+
+width: 30%;
+
+overflow: hidden;
+-webkit-box-shadow: 0px 1px 1px 0px rgba(130,130,130,1);
+-moz-box-shadow: 0px 1px 1px 0px rgba(130,130,130,1);
+box-shadow: 0px 1px 1px 0px rgba(130,130,130,1);
+
+transition: transform 2s ease;
+border-radius: 5px;
+
+}
+
+
+.track-box:hover {
+
+
+-webkit-box-shadow: 0px 2px 2px 0px rgba(130,130,130,1);
+-moz-box-shadow: 0px 2px 2px 0px rgba(130,130,130,1);
+box-shadow: 0px 2px 2px 0px rgba(130,130,130,1);
+
+position: relative;
+transform: translateY(-10px) scale(1.2, 1.2);
+
+}
+
+.track-box img {
+
+border-radius: 5px;
+
+max-width: 100%;
+
+}
+
+#placeholder {
+
+width: 100vw;
+height: 1000px;
+
+
+}
+
+@keyframes rotateDivs {
+
+0% {transform: rotate(0deg);}
+
+100% {transform: rotate(360deg);}
+
+}
+
+@keyframes dissolve {
+
+0% {transform: scale(1.5, 1.5);}
+10% {transform: scale(2.0, 2.0);}
+25% {transform: scale(1.5, 1.5);}
+40% {transform: scale(1.0, 1.0);}
+50% {transform: scale(0.5, 0.5);}
+60% {transform: scale(0.2, 0.2); opacity: 0.6;}
+75% {transform: scale(0.1, 0.1); opacity: 0.3;}
+100% {opacity: 0;}
+
+
+}
+
+@font-face {
+    font-family: AftaSeri;
+    src: url(fonts/AftaSerifThin-Regular.otf);
+}
+
+#track-list h3 {
+
+font-family: AftaSeri;
+
+}
+
+#clockTower {
+
+ min-width: 400px;
+ min-height: 400px;
+ margin: 0;
+ padding: 0;
+ position: absolute;
+ left: 50%;
+ top: 50%;
+ transform: translate(-50%, -50%);
+ transition: 1.4s;
+ transform-style: preserve-3d;
+ z-index: 1000;
+}
+
+.clocks {
+
+border: 3px solid #98bdcd;
+border-radius: 50%;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate3d(-50%, -50%, -50px);
+-webkit-box-shadow: 0px 2px 74px -2px rgba(152,189,205,1);
+-moz-box-shadow: 0px 2px 74px -2px rgba(152,189,205,1);
+box-shadow: 0px 2px 74px -2px rgba(152,189,205,1);
+
+
+}
+
+#clockOne {
+
+width: 240px;
+height: 240px;
+
+
+}
+
+#clockOne:after {
+
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 10px solid #98bdcd;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+  animation: rotate 10s infinite linear;
+
+}
+
+
+@keyframes rotate {
+
+ 0% {
+    transform: rotate(20deg);
+  }
+  100% {
+    transform: rotate(380deg)
+  }
+
+
+}
+
+/*gallery column presets*/
+
+.col-2 {
+  width: 16%;
+  height: 400px;
+  margin-left: 2%;
+  margin-right: 2%;
+
+}
+
+.col-3 {
+  width: 26%;
+  height: 400px;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+.col-4 {
+  width: 36%;
+  height: 400px;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+.col-5 {
+  width: 46%;
+  height: 400px;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+.col-6 {
+  width: 56%;
+  height: 400px;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+.image-half {
+  width: 80%;
+  height: 250px;
+}
+
+.image-half-smaller {
+  width: 80%;
+  height: 100px;
+}
+
+/*frame-container images*/
+
+#img-1-5 {
+  background: url("animeresize3.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#img-1-3 {
+  background: url("animeresize.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#img-1-2 {
+  background: url("animeresize5.png");
+  background-size: cover;
+  background-position: center;  
+}
+
+#img-2-6 {
+  background: url("animeresize2.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#img-2-4 {
+  background: url("animeresize4.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#img-3-5 {
+  background: url("animeresize6.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#img-4-6 {
+  background: url("animeresize7.jpg");
+  background-size: cover;
+  background-position: center;
+}
