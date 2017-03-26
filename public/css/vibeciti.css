@@ -448,6 +448,7 @@ flex-direction: row;
 
 .image-anchor {
   position: relative;
+  overflow: hidden;
 }
 
 .image-overlay {
@@ -466,7 +467,7 @@ transition: transform 1s ease;
 .image-overlay:hover {
 
 background: url("/images/pattern.gif");
-opacity: 0.4;
+opacity: 0.2;
 
 }
 
@@ -488,7 +489,7 @@ transform: translateY(-350px);
   font-family: AftaSeri;
 }
 
-.image-overlay:hover .text-overlay {
+.image-anchor:hover .text-overlay {
 
 transform: translateY(-50px);
 transition: all 1s ease;

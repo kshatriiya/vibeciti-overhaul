@@ -1,32 +1,32 @@
 
-window.onload = function () {
-
-var playScreen = document.getElementsByClassName("play-screen");
-var button = document.getElementById("testbutton");
-var canvas = document.getElementsByClassName("canvas");
-var closebutton = document.getElementById("closebutton");
 
 
-button.addEventListener("click", function() {
+////make a layout builder object and export
 
-if(classie.has(playScreen[0], "play-screen--hide")) {
+function init_eventListeners(array, queue) {
 
-classie.remove(playScreen[0], "play-screen--hide");
+var carreirs = array;
+var totalCarriers = carriers.length();
+
+for (let i = 0; i <= carriers.length) {
+
+array[i].addEventListener("click", function(){
+
+var trackNumber = this.getAttribute("data-track");
+queue.addTrack(trackNumber);
+queue.prepareTrack(trackNumber);
+queue.playTrack(trackNumber);
+
+
+})
+
+
 }
 
-classie.add(playScreen[0], "play-screen--show");
-canvas[0].style.background = "url('/images/canvas1.jpg')";
+var layoutBuilder = {
 
-});
 
-closebutton.addEventListener("click", function() {
 
-if(classie.has(playScreen[0], "play-screen--show")) {
-	classie.remove(playScreen[0], "play-screen--show");
-}
 
-classie.add(playScreen[0], "play-screen--hide");
-
-});
-
+	
 }
